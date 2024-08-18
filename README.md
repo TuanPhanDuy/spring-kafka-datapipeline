@@ -7,10 +7,9 @@ This project is a Spring Boot application that processes large CSV files contain
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Running the Application](#running-the-application)
 - [Using the API](#using-the-api)
-
+- [Validating](#validating)
 
 ## Features
 
@@ -33,21 +32,33 @@ Before you begin, ensure you have the following installed on your machine:
 
 ### 1. Clone the Repository
 
-First, clone the repository to your local machine:
+- **First, clone the repository to your local machine:
 
-Open git bash
-git clone https://github.com/TuanPhanDuy/spring-kafka-datapipeline.git
-cd spring-kafka-datapipeline
+- **Open git bash
+  
+  git clone https://github.com/TuanPhanDuy/spring-kafka-datapipeline.git.
+  cd spring-kafka-datapipeline.
+
+## Running the Application
 
 ### 2. Build project
 
-Run maven command to build project
+- **Run maven command to build project.
 mvn clean install
 
 ### 3. Run docker compose
 
-Run docker destop
+Run docker desktop
 
-Run docker-compose.yml file to pull images and start containers
+- **Run docker-compose.yml file to pull images and start containers.
 docker compose up -d
 
+## Using the API
+
+Open and import data-pipeline.postman_collection.json into Postman
+POST method: http://localhost:8080/api/upload-file
+Body file : csv file
+
+## Validating
+
+Open browser then access http://localhost:9021/clusters to validate
