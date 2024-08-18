@@ -32,9 +32,9 @@ Before you begin, ensure you have the following installed on your machine:
 
 ### 1. Clone the Repository
 
-- **First, clone the repository to your local machine:
+  First, clone the repository to your local machine:
 
-- **Open git bash
+  Open git bash
   
   git clone https://github.com/TuanPhanDuy/spring-kafka-datapipeline.git.
   cd spring-kafka-datapipeline.
@@ -43,22 +43,22 @@ Before you begin, ensure you have the following installed on your machine:
 
 ### 2. Build project
 
-- **Run maven command to build project.
-mvn clean install
+  Run maven command to build project.
+  mvn clean install
 
 ### 3. Run docker compose
 
-Run docker desktop
+  Run docker desktop
 
-- **Run docker-compose.yml file to pull images and start containers.
-docker compose up -d
+  Run docker-compose.yml file to pull images and start containers.
+  docker compose up -d
 
 ## Using the API
 
-Open and import data-pipeline.postman_collection.json into Postman
-POST method: http://localhost:8080/api/upload-file
-Body file : csv file
+  Open and import data-pipeline.postman_collection.json into Postman
+  POST method: http://localhost:8080/api/upload-file
+  Body file : csv file
 
 ## Validating
 
-Open browser then access http://localhost:9021/clusters to validate
+  Open browser then access http://localhost:9021/clusters to validate
