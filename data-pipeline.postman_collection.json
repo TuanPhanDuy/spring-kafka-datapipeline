@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "9216b5e0-4b9c-4ead-bf04-455d4545cc90",
+		"name": "data-pipeline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13036023"
+	},
+	"item": [
+		{
+			"name": "processfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/t/Downloads/convertcsv.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/upload-file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"upload-file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
