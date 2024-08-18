@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: datapipeline
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10GB
+      max-request-size: 10GB
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      group-id: csv-group
+    topic: data-pipeline
+    batch-size: 1000
