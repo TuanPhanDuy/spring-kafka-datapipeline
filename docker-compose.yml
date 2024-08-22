@@ -26,17 +26,31 @@ services:
     networks:
       - kafka-network
 
-  control-center:
-    image: confluentinc/cp-enterprise-control-center:latest
-    container_name: control-center
+#  control-center:
+#    image: confluentinc/cp-enterprise-control-center:latest
+#    container_name: control-center
+#    depends_on:
+#      - kafka
+#    environment:
+#      CONTROL_CENTER_BOOTSTRAP_SERVERS: kafka:9092
+#      CONTROL_CENTER_ZOOKEEPER_CONNECT: zookeeper:2181
+#      CONTROL_CENTER_REPLICATION_FACTOR: 1
+#    ports:
+#      - "9021:9021"
+#    networks:
+#      - kafka-network
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "8090:8080"
     depends_on:
       - kafka
+      - zookeeper
     environment:
-      CONTROL_CENTER_BOOTSTRAP_SERVERS: kafka:9092
-      CONTROL_CENTER_ZOOKEEPER_CONNECT: zookeeper:2181
-      CONTROL_CENTER_REPLICATION_FACTOR: 1
-    ports:
-      - "9021:9021"
+      DYNAMIC_CONFIG_ENABLED: 'true'
+      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: kafka:9092
+#      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
     networks:
       - kafka-network
 
