@@ -1,6 +1,6 @@
 package com.backend.datapipeline.controller;
 
-import com.backend.datapipeline.service.IDataPipelineService;
+import com.backend.datapipeline.service.DataPipelineService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +14,9 @@ import java.io.IOException;
 @RequestMapping("/api")
 public class DataPipelineController {
 
-    private final IDataPipelineService iDataPipelineService;
+    private final DataPipelineService iDataPipelineService;
 
-    public DataPipelineController(IDataPipelineService iDataPipelineService) {
+    public DataPipelineController(DataPipelineService iDataPipelineService) {
         this.iDataPipelineService = iDataPipelineService;
     }
 
