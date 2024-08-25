@@ -49,7 +49,7 @@ public class DataPipelineServiceImpl implements DataPipelineService {
                     batches.add(message);
                     if (batches.size() >= kafkaProperties.getBatchSize()){
                         batches.parallelStream().forEach(batch -> kafkaService.sendMessage(kafkaProperties.getTopic(), batch));
-                        log.info("push batch message: {}", batches.toString());
+                        log.info("push batch message....");
                         batches.clear();
                     }
 

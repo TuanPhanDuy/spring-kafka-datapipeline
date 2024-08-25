@@ -19,6 +19,7 @@ public class KafkaServiceImpl implements KafkaService {
 
     @Override
     public void sendMessage(String topic, String message) {
+        log.info("sending message: {}", message);
         kafkaTemplate.send(topic, message);
     }
 }
